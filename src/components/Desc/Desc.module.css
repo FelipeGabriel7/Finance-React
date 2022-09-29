@@ -1,0 +1,20 @@
+.history{
+    margin-top:  3em;
+    width: 60%;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.1rem rgb(145, 145, 145);
+    gap: 2rem;
+    background: rgb(235, 235, 235);
+    color: rgb(0, 0, 0);
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.border{
+    font-weight: bold;
+    border-bottom: 1px solid #444;
+}

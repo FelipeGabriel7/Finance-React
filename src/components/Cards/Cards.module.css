@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.values{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-start;
+}
+
+.values div{
+    border-radius: 0.5rem;
+    padding: 3rem;
+    aspect-ratio: 4/2;
+    background: #e7e7e7;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgb(223, 217, 217);
+    cursor: pointer;
+}
+
+.entries , .exit , .some{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
