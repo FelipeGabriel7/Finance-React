@@ -4,12 +4,12 @@ import styles from "./Input.module.css";
 import { useState  } from "react";
 import { Desc } from "../Desc/Desc";
 
-export function Input({handleAdd , transiction , setListTransaction}) {
+export function Input({handleAdd , transaction , setListTransaction}) {
   const[value , setValue] = useState("");
   const[desc ,setDesc] = useState("");
   const[checked , setChecked] = useState(false);
 
-  function gerateId(){
+  function generateId(){
      const random  = Math.floor(Math.random() * (1000 - 1) + 1)
      return random;
   }
@@ -25,7 +25,7 @@ export function Input({handleAdd , transiction , setListTransaction}) {
     }
 
     const transaction = {
-      id: gerateId(),
+      id: generateId(),
       desc: desc,
       value: value,
       checked: checked
@@ -35,9 +35,11 @@ export function Input({handleAdd , transiction , setListTransaction}) {
     setDesc("");
     setValue("");
   }
-  
+
+
   return (
-    <div className={styles.addFinans}>
+    <div>
+          <div className={styles.addFinans}>
       <div className={styles.inputsAdd}>
         <div className={styles.information}>
           <label htmlFor="desc"> Descrição </label>
@@ -50,17 +52,17 @@ export function Input({handleAdd , transiction , setListTransaction}) {
         <div className={styles.type}>
           <label htmlFor="entries">
             {" "}
-            <input type="radio" id="entries" name="entries" checked onChange={() => setChecked(!checked)}/> Entrada
+            <input type="radio" id="entries" name="group1" defaultChecked onChange={() => setChecked(!checked)}/> Entrada
           </label>
           <label htmlFor="exit">
             {" "} 
-            <input type="radio" id="exit" name="exit" onChange={() => setChecked(!checked)}/> Saida
+            <input type="radio" id="exit" name="group1"  onChange={() => setChecked(!checked)}/> Saida
           </label>
           </div> 
           <Button click={verifyIsEmpty}/>
         </div>
-
-        <Desc itens={transiction}  setItens={setListTransaction}/>
+    </div>
+    <Desc itens={transaction}  setItens={setListTransaction}/>
     </div>
   );
 }

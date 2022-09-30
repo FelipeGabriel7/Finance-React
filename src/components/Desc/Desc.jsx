@@ -9,7 +9,7 @@ export function Desc({ itens, setItens }) {
 
       const newItens = itens.filter((transaction) => transaction.id !== id);
       setItens(newItens);
-      localStorage.setItem("transactions", JSON.stringfy(newItens));
+      localStorage.setItem("transactions", JSON.stringify(newItens));
     }
   
 
@@ -18,7 +18,7 @@ export function Desc({ itens, setItens }) {
       <div className={styles.history}>
         <p className={styles.border}> Histórico </p>
         {itens?.map((item) => (
-          <DescDelete item={item} deleteItens={deleteItens} />
+          <DescDelete  key={item.id} item={item} deleteItens={deleteItens} />
         ))}
       </div>
     </>

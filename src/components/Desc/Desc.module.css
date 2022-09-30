@@ -1,6 +1,6 @@
 .history{
-    margin-top:  3em;
     width: 60%;
+    margin: 3em auto;
     border-radius: 0.5rem;
     box-shadow: 0.2rem 0.2rem 0.1rem rgb(145, 145, 145);
     gap: 2rem;
@@ -8,6 +8,7 @@
     color: rgb(0, 0, 0);
     padding: 1.5rem;
     align-items: center;
+    text-align: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -17,4 +18,10 @@
 .border{
     font-weight: bold;
     border-bottom: 1px solid #444;
+}
+
+@media(max-width: 768px){
+    .history{
+        width: 100%;
+    }
 }
